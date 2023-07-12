@@ -1,0 +1,323 @@
+WARNING - 2023-07-12 00:12:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 00:12:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 00:13:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-12 00:13:56 --> ErrorException: pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «noticias_pkey»
+DETAIL:  Ya existe la llave (id)=(2). in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "no...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "no...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "no...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "no...', Array, false)
+#5 C:\xampp\htdocs\ci4\app\Controllers\Home.php(90): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->agregarDato()
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-12 00:13:56 --> pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «noticias_pkey»
+DETAIL:  Ya existe la llave (id)=(2).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «noticias_pkey»
+DETAIL:  Ya existe la llave (id)=(2).', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "noticias" ("id", "titulo", "contenido", "fecha", "fuente", "url") VALUES (\'2\', \'Título de la nueva noticia\', \'Contenido de la nueva noticia\', \'2023-07-11\', \'Croni\', \'https://cronica.com.ec/2023/07/06/mas-de-40-descargas-de-agua-contaminada-llegan-a-los-rios-malacatos-y-zamora/\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "noticias" ("id", "titulo", "contenido", "fecha", "fuente", "url") VALUES (\'2\', \'Título de la nueva noticia\', \'Contenido de la nueva noticia\', \'2023-07-11\', \'Croni\', \'https://cronica.com.ec/2023/07/06/mas-de-40-descargas-de-agua-contaminada-llegan-a-los-rios-malacatos-y-zamora/\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "noticias" ("id", "titulo", "contenido", "fecha", "fuente", "url") VALUES (\'2\', \'Título de la nueva noticia\', \'Contenido de la nueva noticia\', \'2023-07-11\', \'Croni\', \'https://cronica.com.ec/2023/07/06/mas-de-40-descargas-de-agua-contaminada-llegan-a-los-rios-malacatos-y-zamora/\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "noticias" ("id", "titulo", "contenido", "fecha", "fuente", "url") VALUES (:id:, :titulo:, :contenido:, :fecha:, :fuente:, :url:)', [...], false)
+ 6 APPPATH\Controllers\Home.php(90): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->agregarDato()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-12 00:14:11 --> ErrorException: pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «noticias_pkey»
+DETAIL:  Ya existe la llave (id)=(1). in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "no...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "no...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "no...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "no...', Array, false)
+#5 C:\xampp\htdocs\ci4\app\Controllers\Home.php(90): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->agregarDato()
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-12 00:14:11 --> pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «noticias_pkey»
+DETAIL:  Ya existe la llave (id)=(1).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «noticias_pkey»
+DETAIL:  Ya existe la llave (id)=(1).', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "noticias" ("id", "titulo", "contenido", "fecha", "fuente", "url") VALUES (\'1\', \'Título de la nueva noticia\', \'Contenido de la nueva noticia\', \'2023-07-11\', \'Croni\', \'https://cronica.com.ec/2023/07/06/mas-de-40-descargas-de-agua-contaminada-llegan-a-los-rios-malacatos-y-zamora/\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "noticias" ("id", "titulo", "contenido", "fecha", "fuente", "url") VALUES (\'1\', \'Título de la nueva noticia\', \'Contenido de la nueva noticia\', \'2023-07-11\', \'Croni\', \'https://cronica.com.ec/2023/07/06/mas-de-40-descargas-de-agua-contaminada-llegan-a-los-rios-malacatos-y-zamora/\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "noticias" ("id", "titulo", "contenido", "fecha", "fuente", "url") VALUES (\'1\', \'Título de la nueva noticia\', \'Contenido de la nueva noticia\', \'2023-07-11\', \'Croni\', \'https://cronica.com.ec/2023/07/06/mas-de-40-descargas-de-agua-contaminada-llegan-a-los-rios-malacatos-y-zamora/\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "noticias" ("id", "titulo", "contenido", "fecha", "fuente", "url") VALUES (:id:, :titulo:, :contenido:, :fecha:, :fuente:, :url:)', [...], false)
+ 6 APPPATH\Controllers\Home.php(90): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->agregarDato()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 00:14:58 --> syntax error, unexpected token ":"
+in APPPATH\Controllers\Home.php on line 130.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 00:15:25 --> syntax error, unexpected token ":"
+in APPPATH\Controllers\Home.php on line 130.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 00:15:27 --> syntax error, unexpected token ":"
+in APPPATH\Controllers\Home.php on line 130.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 00:15:30 --> syntax error, unexpected token ":"
+in APPPATH\Controllers\Home.php on line 130.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 00:16:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 00:17:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 00:19:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 00:26:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 00:27:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-12 00:29:07 --> ErrorException: pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «noticias_pkey»
+DETAIL:  Ya existe la llave (id)=(2). in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "no...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "no...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "no...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "no...', Array, false)
+#5 C:\xampp\htdocs\ci4\app\Controllers\Home.php(90): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->agregarDato()
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-12 00:29:07 --> pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «noticias_pkey»
+DETAIL:  Ya existe la llave (id)=(2).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «noticias_pkey»
+DETAIL:  Ya existe la llave (id)=(2).', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "noticias" ("id", "titulo", "contenido", "fecha", "fuente", "url") VALUES (\'2\', \'Consulte su lugar de votación para las elecciones del 20 de agosto en Ecuador\', \'Para las elecciones presidenciales en Ecuador el 20 de agosto de 2023, se habilitó la consulta del lugar de votación. La mayoría de los ciudadanos mantendrán el mismo lugar de votación que en las elecciones anteriores. Sin embargo, algunos recintos podrían cambiar debido a daños por el clima o por procesos de reconstrucción o remodelación....\', \'2023-07-07\', \'Primicias\', \'https://www.primicias.ec/noticias/elecciones-presidenciales-2023/consultar-lugar-votacion-mesa-recinto/\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "noticias" ("id", "titulo", "contenido", "fecha", "fuente", "url") VALUES (\'2\', \'Consulte su lugar de votación para las elecciones del 20 de agosto en Ecuador\', \'Para las elecciones presidenciales en Ecuador el 20 de agosto de 2023, se habilitó la consulta del lugar de votación. La mayoría de los ciudadanos mantendrán el mismo lugar de votación que en las elecciones anteriores. Sin embargo, algunos recintos podrían cambiar debido a daños por el clima o por procesos de reconstrucción o remodelación....\', \'2023-07-07\', \'Primicias\', \'https://www.primicias.ec/noticias/elecciones-presidenciales-2023/consultar-lugar-votacion-mesa-recinto/\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "noticias" ("id", "titulo", "contenido", "fecha", "fuente", "url") VALUES (\'2\', \'Consulte su lugar de votación para las elecciones del 20 de agosto en Ecuador\', \'Para las elecciones presidenciales en Ecuador el 20 de agosto de 2023, se habilitó la consulta del lugar de votación. La mayoría de los ciudadanos mantendrán el mismo lugar de votación que en las elecciones anteriores. Sin embargo, algunos recintos podrían cambiar debido a daños por el clima o por procesos de reconstrucción o remodelación....\', \'2023-07-07\', \'Primicias\', \'https://www.primicias.ec/noticias/elecciones-presidenciales-2023/consultar-lugar-votacion-mesa-recinto/\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "noticias" ("id", "titulo", "contenido", "fecha", "fuente", "url") VALUES (:id:, :titulo:, :contenido:, :fecha:, :fuente:, :url:)', [...], false)
+ 6 APPPATH\Controllers\Home.php(90): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->agregarDato()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 00:29:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-12 00:31:22 --> ErrorException: pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «noticias_pkey»
+DETAIL:  Ya existe la llave (id)=(3). in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'UPDATE "noticia...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "noticia...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "noticia...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "noticia...', Array, false)
+#5 C:\xampp\htdocs\ci4\app\Controllers\Home.php(106): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->actualizarDato('1')
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-12 00:31:22 --> pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «noticias_pkey»
+DETAIL:  Ya existe la llave (id)=(3).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «noticias_pkey»
+DETAIL:  Ya existe la llave (id)=(3).', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'UPDATE "noticias" SET "id" = \'3\', "titulo" = \'Consult su lugar de votación para las elecciones del 20 de agosto en Ecuador\', "contenido" = \'Para las elecciones presidenciales en Ecuador el 20 de agosto de 2023, se habilitó la consulta del lugar de votación. La mayoría de los ciudadanos mantendrán el mismo lugar de votación que en las elecciones anteriores. Sin embargo, algunos recintos podrían cambiar debido a daños por el clima o por procesos de reconstrucción o remodelación....\', "fecha" = \'2023-07-07\', "fuente" = \'Primicias\', "url" = \'https://www.primicias.ec/noticias/elecciones-presidenciales-2023/consultar-lugar-votacion-mesa-recinto/\'
+WHERE "id" = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "noticias" SET "id" = \'3\', "titulo" = \'Consult su lugar de votación para las elecciones del 20 de agosto en Ecuador\', "contenido" = \'Para las elecciones presidenciales en Ecuador el 20 de agosto de 2023, se habilitó la consulta del lugar de votación. La mayoría de los ciudadanos mantendrán el mismo lugar de votación que en las elecciones anteriores. Sin embargo, algunos recintos podrían cambiar debido a daños por el clima o por procesos de reconstrucción o remodelación....\', "fecha" = \'2023-07-07\', "fuente" = \'Primicias\', "url" = \'https://www.primicias.ec/noticias/elecciones-presidenciales-2023/consultar-lugar-votacion-mesa-recinto/\'
+WHERE "id" = \'1\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "noticias" SET "id" = \'3\', "titulo" = \'Consult su lugar de votación para las elecciones del 20 de agosto en Ecuador\', "contenido" = \'Para las elecciones presidenciales en Ecuador el 20 de agosto de 2023, se habilitó la consulta del lugar de votación. La mayoría de los ciudadanos mantendrán el mismo lugar de votación que en las elecciones anteriores. Sin embargo, algunos recintos podrían cambiar debido a daños por el clima o por procesos de reconstrucción o remodelación....\', "fecha" = \'2023-07-07\', "fuente" = \'Primicias\', "url" = \'https://www.primicias.ec/noticias/elecciones-presidenciales-2023/consultar-lugar-votacion-mesa-recinto/\'
+WHERE "id" = \'1\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "noticias" SET "id" = :id:, "titulo" = :titulo:, "contenido" = :contenido:, "fecha" = :fecha:, "fuente" = :fuente:, "url" = :url:
+WHERE "id" = :id.1:', [...], false)
+ 6 APPPATH\Controllers\Home.php(106): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->actualizarDato('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 00:31:36 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 00:32:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-12 00:33:46 --> ErrorException: pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «)»
+LINE 1: INSERT INTO &quot;noticias&quot; () VALUES ('')
+                                ^ in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "no...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "no...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "no...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "no...', Array, false)
+#5 C:\xampp\htdocs\ci4\app\Controllers\Home.php(90): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->agregarDato()
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-12 00:33:46 --> pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «)»
+LINE 1: INSERT INTO &quot;noticias&quot; () VALUES ('')
+                                ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «)»
+LINE 1: INSERT INTO &quot;noticias&quot; () VALUES (\'\')
+                                ^', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "noticias" () VALUES (\'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "noticias" () VALUES (\'\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "noticias" () VALUES (\'\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "noticias" () VALUES (::)', [...], false)
+ 6 APPPATH\Controllers\Home.php(90): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->agregarDato()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 00:33:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 00:34:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 13:19:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 13:21:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 13:22:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 13:23:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 13:23:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 13:23:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 13:24:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 13:24:36 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 15:42:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 16:01:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 16:02:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 16:25:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 16:32:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 16:39:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-12 16:42:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
